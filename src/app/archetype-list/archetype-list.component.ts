@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-archetype-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./archetype-list.component.css']
 })
 export class ArchetypeListComponent implements OnInit {
+
+  @Output() archetypeSelected = new EventEmitter();
 
   swappData = [{
     "name": "Beru Whitesun Lars",
@@ -125,4 +127,9 @@ export class ArchetypeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onArchetypeChosen(newlySelectedArchetype) {
+    console.log('ArchetypeListComponent - archetype selected:', newlySelectedArchetype);
+
+    this.archetypeSelected.emit(newlySelectedArchetype);
+  }
 }

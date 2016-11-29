@@ -1,10 +1,20 @@
 <div class="example grey">
 
+  <div *ngIf="currentArchetype">
+    Selected archetype: <strong>{{ currentArchetype.name }}</strong>
+  </div>
+
+  <div *ngIf="!currentArchetype">
+    (No archetype selected)
+  </div>
+
   <app-character-name></app-character-name>
 
   <app-archetype-filter></app-archetype-filter>
 
-  <app-archetype-list></app-archetype-list>
+  <app-archetype-list
+    (archetypeSelected)="onArchetypeSelected($event)"
+  ></app-archetype-list>
 
 </div>
 

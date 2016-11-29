@@ -1,17 +1,10 @@
 <div class="example green">
 
-<!--
-  <app-archetype-card></app-archetype-card>
-  <app-archetype-card></app-archetype-card>
-  <app-archetype-card></app-archetype-card>
-  <app-archetype-card></app-archetype-card>
-  <app-archetype-card></app-archetype-card>
--->
-
-  <app-archetype-card
-    *ngFor="let archetype of swappData"
-    [archetypePersonInfo]="archetype"  
-  ></app-archetype-card>
+    <app-archetype-card
+      *ngFor="let person of swappData"
+      [archetypePersonInfo]="person"  
+      (archetypeChosen)="onArchetypeChosen($event)"
+    ></app-archetype-card>
 
 </div>
 

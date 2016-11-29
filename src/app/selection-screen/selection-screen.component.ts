@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectionScreenComponent implements OnInit {
 
+  currentArchetype;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onArchetypeSelected(selectedArchetype) {
+    console.log('SelectionScreenComponent - archetype selected:', selectedArchetype);
+    this.currentArchetype = selectedArchetype;
+  }
 }

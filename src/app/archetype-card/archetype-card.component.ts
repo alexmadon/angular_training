@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-archetype-card',
@@ -9,9 +9,15 @@ export class ArchetypeCardComponent implements OnInit {
 
   @Input('archetypePersonInfo') archetype;
 
+  @Output() archetypeChosen = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  chooseThisArchetype(a) {
+    console.log('ArchetypeCardComponent: user clicked archetype', a);
+    this.archetypeChosen.emit(a);
+  }
 }
