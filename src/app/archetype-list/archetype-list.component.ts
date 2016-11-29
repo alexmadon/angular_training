@@ -119,8 +119,9 @@ export class ArchetypeListComponent implements OnInit {
     "statPref": "dex"
   }];
 
-  constructor() { }
 
+  constructor() { }
+  
   ngOnInit() {
   }
 

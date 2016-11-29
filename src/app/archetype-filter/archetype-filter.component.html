@@ -13,10 +13,10 @@
 
   <div>
     Sex:
-    <button>Male</button>
-    <button>Female</button>
-    <button>Other</button>
-    <button>All</button>
+    <button (click)="setSex('male')"   [class.buttonSelected]=" filterProperties.sex === 'male'   ">Male</button>
+    <button (click)="setSex('female')" [class.buttonSelected]=" filterProperties.sex === 'female' ">Female</button>
+    <button (click)="setSex('other')"  [class.buttonSelected]=" filterProperties.sex === 'other'  ">Other</button>
+    <button (click)="setSex('')"       [class.buttonSelected]=" filterProperties.sex === ''       ">All</button>
 
     Race:
     <button>Human</button>
