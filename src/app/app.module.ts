@@ -13,6 +13,8 @@ import { ArchetypeCardComponent } from './archetype-card/archetype-card.componen
 import { ArchetypeFilterComponent } from './archetype-filter/archetype-filter.component';
 import { ArchetypeListComponent } from './archetype-list/archetype-list.component';
 
+import { SwappDataService } from './swapp-data.service';
+
 const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeScreenComponent },
@@ -35,7 +37,9 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
-  providers: [],
+  providers: [
+    SwappDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
