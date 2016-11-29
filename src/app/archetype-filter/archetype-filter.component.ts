@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ArchetypeFilterComponent implements OnInit {
 
   filterProperties = {
-    sex: ''
+    sex: '',
+    race: ''
   };
 
   constructor() { }
@@ -19,6 +20,11 @@ export class ArchetypeFilterComponent implements OnInit {
   setSex(selectedSex) {
     console.log('Set sex to ' + selectedSex);
     this.filterProperties.sex = selectedSex;
+  }
+
+  setRace(selectedRace) {
+    console.log('Set race to ' + selectedRace);
+    this.filterProperties.race = selectedRace;
   }
 
 }

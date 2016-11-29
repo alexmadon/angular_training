@@ -13,16 +13,16 @@
 
   <div>
     Sex:
-    <button (click)="setSex('male')"   [class.buttonSelected]=" filterProperties.sex === 'male'   ">Male</button>
-    <button (click)="setSex('female')" [class.buttonSelected]=" filterProperties.sex === 'female' ">Female</button>
-    <button (click)="setSex('other')"  [class.buttonSelected]=" filterProperties.sex === 'other'  ">Other</button>
-    <button (click)="setSex('')"       [class.buttonSelected]=" filterProperties.sex === ''       ">All</button>
+    <button (click)="setSex('Male')"   [class.buttonSelected]=" filterProperties.sex  === 'Male'   ">Male</button>
+    <button (click)="setSex('Female')" [class.buttonSelected]=" filterProperties.sex  === 'Female' ">Female</button>
+    <button (click)="setSex('Other')"  [class.buttonSelected]=" filterProperties.sex  === 'Other'  ">Other</button>
+    <button (click)="setSex('')"       [class.buttonSelected]=" filterProperties.sex  === ''       ">All</button>
 
     Race:
-    <button>Human</button>
-    <button>Droid</button>
-    <button>All</button>
-  </div>
-
+    <button (click)="setRace('Human')" [class.buttonSelected]=" filterProperties.race === 'Human' ">Human</button>
+    <button (click)="setRace('Droid')" [class.buttonSelected]=" filterProperties.race === 'Droid' ">Droid</button>
+    <button (click)="setRace('')"      [class.buttonSelected]=" filterProperties.race === ''      ">All</button>
+  </div>   
+                                                                                                  
 </div>
 

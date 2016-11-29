@@ -8,10 +8,10 @@
   <app-archetype-card></app-archetype-card>
 -->
 
-  <div *ngFor="let archetype of swappData">
-    {{ archetype.name }}
-    Hair: {{ archetype["hair color"] }}
-  </div>
+  <app-archetype-card
+    *ngFor="let archetype of swappData"
+    [archetypePersonInfo]="archetype"  
+  ></app-archetype-card>
 
 </div>
 
