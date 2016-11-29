@@ -1,10 +1,15 @@
 <div class="example green">
 
+<!--
   <app-archetype-card></app-archetype-card>
   <app-archetype-card></app-archetype-card>
   <app-archetype-card></app-archetype-card>
   <app-archetype-card></app-archetype-card>
   <app-archetype-card></app-archetype-card>
+-->
 
+  <div *ngFor="let archetype of swappData">
+    {{ archetype.name }}
+  </div>
 </div>
 
