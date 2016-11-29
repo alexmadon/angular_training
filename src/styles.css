@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+.example {
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.blue   { border-color: blue; }
+.red    { border-color: red; }
+.green  { border-color: green; }
+.orange { border-color: orange; }
+.grey   { border-color: grey; }
+
