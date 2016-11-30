@@ -3,10 +3,14 @@
   <h2>Name your Character</h2>
 
   <form [formGroup]="characterNameFormGroup">
+
+
     <input
       placeholder="Character Name"
       formControlName="characterName"
     >
+    {{ quality }}
+
     <!-- touched -->
     <span *ngIf="characterNameFormGroup.controls.characterName.touched">
 

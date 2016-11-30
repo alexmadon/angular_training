@@ -2,6 +2,8 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { SwappDataService } from '../swapp-data.service';
 
+import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'app-archetype-list',
   templateUrl: './archetype-list.component.html',
@@ -11,13 +13,13 @@ export class ArchetypeListComponent implements OnInit {
 
   @Output() archetypeSelected = new EventEmitter();
 
-  swappData;
+  swappData$: Observable<any>;
   
   constructor( private sds: SwappDataService ) {
   }
   
   ngOnInit() {
-    this.swappData = this.sds.getData();
+    this.swappData$ = this.sds.loadData();
   }
 
   onArchetypeChosen(newlySelectedArchetype) {

@@ -1,7 +1,7 @@
 <div class="example green">
 
     <app-archetype-card
-      *ngFor="let person of swappData"
+      *ngFor="let person of swappData$ | async"
       [archetypePersonInfo]="person"  
       (archetypeChosen)="onArchetypeChosen($event)"
     ></app-archetype-card>
