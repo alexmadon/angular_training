@@ -11,6 +11,8 @@ export class ArchetypeListComponent implements OnInit {
 
   @Output() archetypeSelected = new EventEmitter();
 
+  swappData;
+  
   constructor( private sds: SwappDataService ) {
   }
   
