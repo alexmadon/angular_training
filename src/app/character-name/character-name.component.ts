@@ -13,7 +13,18 @@ export class CharacterNameComponent implements OnInit {
 
   ngOnInit() {
     this.characterNameFormGroup = this.fb.group({
-      characterName: ['', [Validators.required, Validators.minLength(5)]]
+      characterName: [
+
+        // Initial value
+        '',
+
+        // Validators
+        [
+          Validators.required,
+          Validators.minLength(5)
+        ]
+
+      ]
     });
   }
 
