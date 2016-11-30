@@ -2,7 +2,29 @@
 
   <h2>Name your Character</h2>
 
-  <input placeholder="Character Name">
+  <form [formGroup]="characterNameFormGroup">
+    <input
+      placeholder="Character Name"
+      formControlName="characterName"
+    >
+    <!-- touched -->
+    <span *ngIf="characterNameFormGroup.controls.characterName.touched">
+
+      <!-- required -->
+      <span *ngIf="characterNameFormGroup.controls.characterName.errors?.required">
+        A character name is required
+      </span><!-- end required -->
+
+      <!-- minlength -->
+      <span *ngIf="characterNameFormGroup.controls.characterName.errors?.minlength">
+        Character name must be at least
+        {{ characterNameFormGroup.controls.characterName.errors.minlength.requiredLength }}
+        characters long
+      </span><!-- end minlength -->
+
+    </span><!-- end touched -->
+
+  </form>
 
 <div>
 
